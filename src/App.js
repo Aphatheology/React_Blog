@@ -16,7 +16,7 @@ function App() {
             <Routes>
                 <Route path="/register" element={<Register />}></Route>
                 <Route path="/login" element={<Login />}></Route>
-                <Route path="/" element={<><NewArticle /><Articles />
+                <Route path={"/" || "/React_Blog"} element={<><NewArticle /><Articles />
                 </>}>
                 </Route>
                 <Route path="/article/:createdBy/:id" element={<ReadEachArticle />}> </Route>
