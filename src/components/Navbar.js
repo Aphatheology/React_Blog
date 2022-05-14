@@ -9,7 +9,7 @@ function Navbar() {
     
   return (
     <div className='navbar'>
-        <Link to="/">Home</Link>
+        <Link to="/">Apha-Blog</Link>
         {user && 
             <>
                 <p>Signed in as {user.displayName}</p>

@@ -58,16 +58,6 @@ function Comment({id}) {
         
     }
     
-    // comment
-    // "nice article"
-    // commentId
-    // "93331528-5a46-4f4b-beea-c402e3ff7795"
-    // createdAt
-    // May 13, 2022 at 4:47:33 PM UTC+1
-    // user
-    // "OG8ilVnXzXO34Ri1d4EuzCMw4ON2"
-    // userName
-    // "anonbeeta"{commentId, user, comment, userName}
 
   return (
     <div>
@@ -90,6 +80,9 @@ function Comment({id}) {
             comments.map(({commentId, userName, user, comment, createdAt}) => (
                 
                 <div key={commentId}>
+                    <h3>Comments</h3>
+
+                    <hr />
                     
                    <h4 style={{
                        color: currentlyLoggedInUser !== null && user === currentlyLoggedInUser.uid ? "green" : "blue"
@@ -100,6 +93,8 @@ function Comment({id}) {
                         currentlyLoggedInUser !== null && user === currentlyLoggedInUser.uid &&
                        <button onClick={() => handleDeleteComment({ commentId, user, comment, userName , createdAt})}>Delete Comment</button>
                    }
+
+                    <hr />
                    
                 </div>
                 // <p>{comments.length}</p>
